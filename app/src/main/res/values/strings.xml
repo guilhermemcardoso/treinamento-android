@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Treinamento Android</string>
+
+    <string name="oauth_client_id">9c9a4b8099e6bce73120</string>
+    <string name="oauth_client_secret">4bf744bf7a3805a72db0de1d2a94889290e0dc7f</string>
+    <string name="oauth_host">https://github.com/guilhermemcardoso</string>
+    <string name="oauth_schema">http</string>
+
+    <string name="app_name">Android Training</string>
+
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+
+    <string name="btn_login">Login</string>
+    <string name="btn_OAuth">Login with OAuth</string>
+
+    <string name="msg_errorPasswordEmpty">Empty password</string>
+    <string name="msg_errorUsernameEmpty">Empty username</string>
+
 </resources>

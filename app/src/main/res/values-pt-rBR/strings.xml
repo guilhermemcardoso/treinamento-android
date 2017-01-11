@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Treinamento Android</string>
+
+    <string name="txt_username">Usuário</string>
+    <string name="txt_password">Senha</string>
+
+    <string name="btn_login">Entrar</string>
+    <string name="btn_OAuth">Entrar com OAuth</string>
+
+    <string name="msg_errorPasswordEmpty">Senha em branco</string>
+    <string name="msg_errorUsernameEmpty">Usuário em branco</string>
+</resources>
