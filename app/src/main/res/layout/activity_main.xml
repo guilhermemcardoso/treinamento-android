@@ -52,14 +52,17 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/btnLogin"
-        android:text="@string/btn_login"
+        android:id="@+id/btnBasicAuth"
+        android:text="@string/btn_basicAuth"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:backgroundTint="@color/red"
         android:text="@string/btn_OAuth"
         android:id="@+id/btnOAuth" />
 </LinearLayout>
