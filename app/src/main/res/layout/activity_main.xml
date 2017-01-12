@@ -11,19 +11,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="io.gmcardoso.treinamentoandroid.MainActivity">
+    tools:context="br.com.monitoratec.app.MainActivity">
 
     <ImageView
         android:id="@+id/ivGitHub"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:srcCompat="@drawable/ic_github" />
 
     <TextView
         android:id="@+id/tvGitHub"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
         android:textAlignment="center" />
 
     <android.support.design.widget.TextInputLayout
@@ -52,17 +51,16 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/btnBasicAuth"
-        android:text="@string/btn_basicAuth"
+        android:id="@+id/btBasicAuth"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/txt_basic_auth" />
+
+    <Button
+        android:id="@+id/btOAuth"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:backgroundTint="@color/red"
-        android:text="@string/btn_OAuth"
-        android:id="@+id/btnOAuth" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_oauth" />
 </LinearLayout>

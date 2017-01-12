@@ -1,7 +1,7 @@
-package io.gmcardoso.treinamentoandroid.domain.entity;
+package br.com.monitoratec.app.domain.entity;
 
 /**
- * Created by guilherme on 11/01/2017.
+ * Created by falvojr on 1/11/17.
  */
 
 public class AccessToken {

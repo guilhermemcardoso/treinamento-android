@@ -1,4 +1,4 @@
-package io.gmcardoso.treinamentoandroid;
+package br.com.monitoratec.app;
 
 import org.junit.Test;
 

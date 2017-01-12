@@ -1,4 +1,4 @@
-package io.gmcardoso.treinamentoandroid;
+package br.com.monitoratec.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("io.gmcardoso.treinamentoandroid", appContext.getPackageName());
+        assertEquals("br.com.monitoratec.app", appContext.getPackageName());
     }
 }
