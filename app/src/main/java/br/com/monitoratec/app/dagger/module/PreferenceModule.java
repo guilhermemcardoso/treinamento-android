@@ -11,9 +11,6 @@ import br.com.monitoratec.app.R;
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by falvojr on 1/12/17.
- */
 @Module
 public class PreferenceModule {
 
