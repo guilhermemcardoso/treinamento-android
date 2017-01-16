@@ -37,7 +37,7 @@ public class AuthPresenter implements AuthContract.Presenter{
 
     @Override
     public void callGetUser(String authorization) {
-        mGitHubRepository.basicAuth(authorization)
+        mGitHubRepository.getUser(authorization)
                 .subscribe(user -> {
                     mView.onAuthSuccess(authorization, user);
                 }, error -> {

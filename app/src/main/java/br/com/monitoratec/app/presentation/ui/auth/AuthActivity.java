@@ -28,6 +28,7 @@ import br.com.monitoratec.app.domain.entity.Status;
 import br.com.monitoratec.app.domain.entity.User;
 import br.com.monitoratec.app.presentation.base.BaseActivity;
 import br.com.monitoratec.app.presentation.helper.AppHelper;
+import br.com.monitoratec.app.presentation.ui.profile.ProfileActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -161,7 +162,9 @@ public class AuthActivity extends BaseActivity implements AuthContract.View {
     public void onAuthSuccess(String credential, User user) {
         String credentialKey = getString(R.string.sp_credential_key);
         mSharedPrefs.edit().putString(credentialKey, credential).apply();
-        Snackbar.make(mImgGitHub, credential, Snackbar.LENGTH_LONG).show();
+        //Snackbar.make(mImgGitHub, credential, Snackbar.LENGTH_LONG).show();
+        Intent intent = new Intent(AuthActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     @Override

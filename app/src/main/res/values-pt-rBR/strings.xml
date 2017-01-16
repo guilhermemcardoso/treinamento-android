@@ -10,4 +10,9 @@
     <string name="txt_good">Status API: Bom</string>
     <string name="txt_minor">Status API: Instável</string>
     <string name="txt_major">Status API: Indisponível</string>
+    <string name="txt_logout">Sair</string>
+    <string name="txt_my_account">Minha conta</string>
+    <string name="txt_home">Página Inicial</string>
+    <string name="txt_repositories">Repositórios</string>
+    <string name="txt_my_profile">Meu Perfil</string>
 </resources>

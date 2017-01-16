@@ -33,6 +33,7 @@ ext {
     retrofitLibVersion = '2.1.0'
     butterknifeLibVersion = '8.4.0'
     daggerLibVersion = '2.8'
+    picassoLibVersion = '2.5.2'
 }
 
 dependencies {
@@ -46,6 +47,7 @@ dependencies {
 
     compile "com.squareup.retrofit2:retrofit:${retrofitLibVersion}"
     compile "com.squareup.retrofit2:converter-gson:${retrofitLibVersion}"
+    compile "com.squareup.retrofit2:converter-scalars:${retrofitLibVersion}"
     compile "com.squareup.retrofit2:adapter-rxjava:${retrofitLibVersion}"
 
     // RxJava (by ReactiveX)
@@ -61,4 +63,7 @@ dependencies {
     // Dagger 2 (by Google)
     compile "com.google.dagger:dagger:${daggerLibVersion}"
     annotationProcessor "com.google.dagger:dagger-compiler:${daggerLibVersion}"
+
+    // Picasso (para manipulação de imagens carregadas da internet
+    compile "com.squareup.picasso:picasso:${picassoLibVersion}"
 }

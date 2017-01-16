@@ -6,13 +6,6 @@ import java.util.Date;
 
 import br.com.monitoratec.app.R;
 
-/**
- * Entidade da API GitHub Status.
- *
- * @see <a href="https://status.github.com/api/last-message.json">Last Message</a>
- *
- * Created by falvojr on 1/9/17.
- */
 public class Status {
     @SerializedName("status")
     public Type type;

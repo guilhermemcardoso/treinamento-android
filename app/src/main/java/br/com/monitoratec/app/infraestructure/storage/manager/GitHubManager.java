@@ -16,8 +16,15 @@ public class GitHubManager implements GitHubRepository {
     }
 
     @Override
-    public Observable<User> basicAuth(String authorization) {
-        return mGitHubService.basicAuth(authorization)
+    public Observable<User> getUser(String authorization) {
+        return mGitHubService.getUser(authorization)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<String> getZenMessage() {
+        return mGitHubService.getZenMessage()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

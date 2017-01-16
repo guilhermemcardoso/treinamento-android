@@ -14,6 +14,7 @@ import dagger.Provides;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 
 @Module
@@ -45,33 +46,43 @@ public class NetworkModule {
 
     @Provides
     @Singleton
+    ScalarsConverterFactory providesScalarsConverterFactory() {
+        return ScalarsConverterFactory.create();
+    }
+
+    @Provides
+    @Singleton
     @Named(RETROFIT_GITHUB)
     Retrofit providesRetrofitGitHub(GsonConverterFactory gsonFactory,
-                                    RxJavaCallAdapterFactory rxFactory) {
-        return buildRetrofit(gsonFactory, rxFactory, GitHubService.BASE_URL);
+                                    RxJavaCallAdapterFactory rxFactory,
+                                    ScalarsConverterFactory scalarsFactory) {
+        return buildRetrofit(gsonFactory, rxFactory, scalarsFactory, GitHubService.BASE_URL);
     }
 
     @Provides
     @Singleton
     @Named(RETROFIT_GITHUB_STATUS)
     Retrofit providesRetrofitGitHubStatus(GsonConverterFactory gsonFactory,
-                                          RxJavaCallAdapterFactory rxFactory) {
-        return buildRetrofit(gsonFactory, rxFactory, GitHubStatusService.BASE_URL);
+                                          RxJavaCallAdapterFactory rxFactory,
+                                          ScalarsConverterFactory scalarsFactory) {
+        return buildRetrofit(gsonFactory, rxFactory, scalarsFactory, GitHubStatusService.BASE_URL);
     }
 
     @Provides
     @Singleton
     @Named(RETROFIT_GITHUB_OAUTH)
     Retrofit providesRetrofitGitHubOAuth(GsonConverterFactory gsonFactory,
-                                         RxJavaCallAdapterFactory rxFactory) {
-        return buildRetrofit(gsonFactory, rxFactory, GitHubOAuthService.BASE_URL);
+                                         RxJavaCallAdapterFactory rxFactory,
+                                         ScalarsConverterFactory scalarsFactory) {
+        return buildRetrofit(gsonFactory, rxFactory, scalarsFactory, GitHubOAuthService.BASE_URL);
     }
 
     private Retrofit buildRetrofit(GsonConverterFactory converterFactory,
                                    RxJavaCallAdapterFactory callAdapterFactory,
-                                   String baseUrl) {
+                                   ScalarsConverterFactory scalarsFactory, String baseUrl) {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
+                .addConverterFactory(scalarsFactory)
                 .addConverterFactory(converterFactory)
                 .addCallAdapterFactory(callAdapterFactory)
                 .build();
